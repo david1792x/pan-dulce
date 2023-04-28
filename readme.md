@@ -2,7 +2,7 @@
 
 ## **Introduction**
 
-**Pan dulce** (Spanish for ***sweet bread***) is the general name given to a group of traditional **Mexican** pastries. It was popularized in the mid 1800s during the **French occupation** in Mexico and is usually eaten as a breakfast or after foods, and can be eaten alone or paired with **milk, hot chocolate, coffee** or **champurrado**. Pan dulce is an **essential part of Mexican cusine** and a very popular in Mexican households for it's **cheap price** and representation of **Mexican culture**.
+**Pan dulce** (Spanish for ***sweet bread***) is the general name given to a group of traditional **Mexican** pastries. It was popularized in the mid 1800s during the **French occupation** in Mexico and is usually eaten as a breakfast or after foods, and can be eaten alone or paired with **milk, hot chocolate, coffee** or **champurrado**. Pan dulce is an **essential part of Mexican cusine** and a very popular in Mexican households for it's **cheap price** and colorful, vibrant representation of **Mexican culture**.
 
 <div align="center">
 
@@ -22,13 +22,13 @@ There are many different types of pastries that are considered pan dulce, with s
 
 </div>
 
-
+Pan dulce is sold in bakeries, or **panaderias**, where the pastries are displayed in racks for anyone to choose their favourite type of pan dulce, whose prices can vary between **\$10** and **\$20** pesos (50¢ to \$1 dollar) per piece of bread.  In the state of **Baja California** in Mexico, the city of **Tecate** has become a famous stopping point for its traditional bread, among which, there are many iconic varieties of **pan dulce**.
 
 <div align="center">
 
-|  <img src='images/ornelas.jpg' height="250">                       | <img src='images/bahia.jpg' height="250">  |
+|  <img src='images/tecate.jpg' height="250">                       | <img src='images/bahia.jpg' height="250">  |
 |:----------------------------------------------------------------------:|:-------------------------------------------:|
-| ***Figure 4.**  A panaderia in Ensenada, Baja California*                       |***Figure 5.**  Pan dulce inside of a panaderia* |
+| ***Figure 4.**  A panaderia in Tecate, Baja California*                       |***Figure 5.**  Pan dulce inside of a panaderia* |
 
 </div>
 
