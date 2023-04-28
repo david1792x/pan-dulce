@@ -6,31 +6,20 @@
 
 <div align="center">
 
-|  <img src='images/conchita.jpg' height="250">                     | <img src='images/elote.jpg' height="250">  |  <img src='images/quequito.png' height="250">  |
-|:----------------------------------------------------------------------:|:------------------------------------: |:-------------------------------------------:|
-| ***Figure 1.**  Conchitas*                       | ***Figure 2.**  Elote* | ***Figure 3.**  Quequitos* |
+|  <img src='images/pan_dulce.jpg' height="250">                      |
+|:----------------------------------------------------------------------:|
+| ***Figure 1.**  Conchitas*                       | 
 
 </div>
-
-
 
 <div align="center">
 
-|  <img src='images/valle_location.jpg' height="250">                     | <img src='images/el_cielo.jpg' height="250">  |
-|:----------------------------------------------------------------------:|:------------------------------------: |
-| ***Figure 3.**  Location of Valle de Guadalupe*                       | ***Figure 4.**  A vineyard in Valle de Guadalupe (El Cielo)* |
+|  <img src='images/conchita.jpg' height="250">                      |  <img src='images/quequito.png' height="250">  |
+|:----------------------------------------------------------------------:|:-------------------------------------------:|
+| ***Figure 1.**  Conchitas*                       | ***Figure 2.**  Quequitos* |
 
 </div>
 
-
-
-<div align="center">
-
-|  <img src='images/pierce.PNG' height="250">                     | <img src='images/red_blotch.PNG' height="250">  | <img src='images/leafroll.png' height="250"> |
-|:----------------------------------------------------------------------:|:------------------------------------: |:-------:|
-| ***Figure 5.**  Pierce's disease*                       | ***Figure 6.**  Red blotch disease* | ***Figure 7.**  Grapevine leafroll disease* |
-
-</div>
 
 ## **Project overview**
 
