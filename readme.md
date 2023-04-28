@@ -2,13 +2,13 @@
 
 ## **Introduction**
 
-
+**Pan dulce** (Spanish for sweet bread) is the general name given to a group of traditional mexican pastries. 
 
 <div align="center">
 
-|  <img src='images/merlot_2.jpg' height="250">                     | <img src='images/wine_2.jpg' height="250">  |
-|:----------------------------------------------------------------------:|:------------------------------------: |
-| ***Figure 1.**  Clusters of Merlot grapes*                       | ***Figure 2.**  A bottle and glass of wine* |
+|  <img src='images/conchita.jpg' height="250">                     | <img src='images/elote.jpg' height="250">  |  <img src='images/quequitos.jpeg' height="250">  |
+|:----------------------------------------------------------------------:|:------------------------------------: |:-------------------------------------------:|
+| ***Figure 1.**  Conchitas*                       | ***Figure 2.**  Elote* | ***Figure 3.**  Quequitos* |
 
 </div>
 
