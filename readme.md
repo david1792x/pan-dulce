@@ -22,7 +22,7 @@ There are many different types of pastries that are considered pan dulce, with s
 
 </div>
 
-Pan dulce is sold in bakeries, or **panaderias**, where the pastries are displayed in racks for anyone to choose their favourite type of pan dulce, whose prices can vary between **\$10** and **\$20** pesos (50¢ to \$1 dollar) per piece of bread.  In the state of **Baja California** in Mexico, the city of **Tecate** has become a famous stopping point for its traditional bread, among which, there are many iconic varieties of **pan dulce**.
+Pan dulce is sold in bakeries, or **panaderias**, where the pastries are displayed in racks for anyone to choose their favourite type of pan dulce, whose prices can vary between **\$10** and **\$20** pesos (**50¢** to **\$1** dollar) per piece of bread.  In the state of **Baja California** in Mexico, the city of **Tecate** has become a famous stopping point for its traditional bread, among which, there are many iconic varieties of **pan dulce**.
 
 <div align="center">
 
