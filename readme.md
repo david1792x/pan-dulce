@@ -1,1 +1,1 @@
-# **Classification of Pan Dulce types using Deep Learning** :bread: :doughnut: :computer:
+# **Classification of Pan Dulce using Deep Learning** :bread: :doughnut: :computer:
