@@ -36,10 +36,10 @@ Pan dulce is sold in bakeries, or **panaderias**, where the pastries are display
 
 
 ## **Objectives**
--
--
--
--
+- Create a **labeled image dataset** of the most popular types of pan dulce
+- Train a **deep learning model** for image classification using **transfer learning**
+- Deploy a simple **web application** for classification of user inputted images of pan dulce
+- Write **documentation** and **project reports** that correctly showcase the work made
 
 ## **Project development**
 
