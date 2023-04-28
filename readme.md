@@ -6,7 +6,7 @@
 
 <div align="center">
 
-|  <img src='images/conchita.jpg' height="250">                     | <img src='images/elote.jpg' height="250">  |  <img src='images/quequitos.jpeg' height="250">  |
+|  <img src='images/conchita.jpg' height="250">                     | <img src='images/elote.jpg' height="250">  |  <img src='images/quequito.png' height="250">  |
 |:----------------------------------------------------------------------:|:------------------------------------: |:-------------------------------------------:|
 | ***Figure 1.**  Conchitas*                       | ***Figure 2.**  Elote* | ***Figure 3.**  Quequitos* |
 
