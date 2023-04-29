@@ -15,7 +15,7 @@ class PanDulceDataset(Dataset):
     
     def __getitem__(self, index):
         img_path = os.path.join(self.root_dir, self.annotations.iloc[index, 0])
-        image = skimage.io.imread(img_path)
+        image = io.imread(img_path)
         y_label = torch.tensor(int(self.annotations.iloc[index, 1]))
         
         if self.transform:
