@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import torch
 from torch.utils.data import Dataset
-import torchvision
+from skimage import io
 
 class PanDulceDataset(Dataset):
     def __init__(self, csv_file, root_dir, transform=None):
@@ -15,7 +15,7 @@ class PanDulceDataset(Dataset):
     
     def __getitem__(self, index):
         img_path = os.path.join(self.root_dir, self.annotations.iloc[index, 0])
-        image = torchvision.io.read_image(img_path)
+        image = io.imread(img_path)
         y_label = torch.tensor(int(self.annotations.iloc[index, 1]))
         
         if self.transform:
