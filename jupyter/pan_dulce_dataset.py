@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import torch
 from torch.utils.data import Dataset
-import skimage
+from skimage import io
 
 class PanDulceDataset(Dataset):
     def __init__(self, csv_file, root_dir, transform=None):
