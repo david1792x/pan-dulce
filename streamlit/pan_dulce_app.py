@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image
 
 # Load deep learning model
-model = torch.load('pan_dulce_model.pt')
+model = torch.load('streamlit\pan_dulce_model.pt')
 model.eval()
 
 # Set page style and title
