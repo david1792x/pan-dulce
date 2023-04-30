@@ -12,7 +12,7 @@
 
 </div>
 
-There are many different types of pastries that are considered pan dulce, with some of the most popular being **conchitas, quequitos (or mantecadas), puerquitos, orejitas, chilindrinas, trenzas**, among others. There are also some varieties of pan dulce that are **seasonal** or have a special **religious or cultural significance**, like **pan de muerto**, which is consumed around the Mexican festivity of **Dia de los Muertos** in November and offered to the dead in an altar, or **rosca de Reyes**, which is eaten on January 6th, when **Dia de los Reyes Magos** is celebrated.
+There are many different types of pastries that are considered pan dulce, with some of the most popular being **conchitas, quequitos (or mantecadas), puerquitos, orejitas, donas**, among others. There are also some varieties of pan dulce that are **seasonal** or have a special **religious or cultural significance**, like **pan de muerto**, which is consumed around the Mexican festivity of **Dia de los Muertos** in November and offered to the dead in an altar, or **rosca de Reyes**, which is eaten on January 6th, when **Dia de los Reyes Magos** is celebrated.
 
 <div align="center">
 
@@ -36,7 +36,7 @@ Pan dulce is sold in bakeries, or **panaderias**, where the pastries are display
 
 
 ## **Objectives**
-- Create a **labeled image dataset** of the most popular types of pan dulce
+- Create a **labeled image dataset** of some of the most popular types of pan dulce
 - Train a **deep learning model** for image classification using **transfer learning**
 - Deploy a simple **web application** for classification of user inputted images of pan dulce
 - Write **documentation** and **project reports** that correctly showcase the work made
