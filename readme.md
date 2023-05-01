@@ -33,7 +33,7 @@ Pan dulce is sold in bakeries, or **panaderias**, where the pastries are display
 </div>
 
 ## **Project overview**
-In this project, we will use the `Bing Image Search API` to create a small dataset of 10 different types of pan dulce, and use this data to train a convolutional neural network that uses the `ResNet50` model as the base for an image classifier. Finally, the trained classifier will be used inside a simple web application designed using Streamlit and deployed through Streamlit Cloud Services to make classifications based on user inputted images, and display a small description of the predicted type of pan dulce.
+In this project, we will use the `Bing Image Search API` to create a **small dataset** of **10** different types of **pan dulce**, and use this data to train a **convolutional neural network** that uses the `ResNet50` model as the base for an **image classifier**. Finally, the trained classifier will be used inside a simple **web application** designed using the `Streamlit` framework and deployed through **Streamlit Cloud Services** to make **classifications** based on user inputted images, and display a small description of the **predicted** type of pan dulce.
 
 The workflow diagram of the project is shown below.
 
@@ -105,7 +105,7 @@ Finally, we use the trained deep learning model as the backbone of a simple **we
 ## **Discussion**
 The **deep learning** model that was designed and developed in the project achieved an accuracy of around **90%**, which is very **good** considering the amount of data available and the objectives of the project. There are many food image classification projects that achieve higher metrics by using **larger datasets** like the `Food-101` dataset and **bigger models** like `VGG19` or `VisionTransformer`, but the `ResNet50` model chosen as the base of our model performs well enough for our application while maintaining an acceptable level of **complexity**.
 
-Some of the areas of opportunity for the project to improve are listed below.
+Some of the **areas of opportunity** for the project to improve are listed below.
 - The method for extracting data using Bing Image Search API is **not very efficient** since it returns a lot of **duplicate** images and not many unique samples. A better approach with **optimized queries** should be easy to design and implement.
 - The retrieved images are not very **noisy** and there are very few examples for the amount of categories in the project. A **bigger** dataset containing more webscraped images and **hand-taken photos** would greatly improve model performance, since a machine learning model is only as **good** as the data it recieves.
 - There are a lot more important **types** of pan dulce that weren't included in the model for simplicity purposes. A more efficient method for building a bigger dataset would allow for **more classes** to be added to the classification model.
@@ -115,7 +115,7 @@ Some of the areas of opportunity for the project to improve are listed below.
 ## **Final remarks**
 Taking into account the **objectives** of the project, the results are very **satisfactory**. This project managed to explore the **basic workflow** of a typical image processing project, all the way from **extracting the data, manually checking images** and **preprocessing** the data to **designing** a model, **training** it and quantifying its **performance**. Some key aspects of **computer vision** projects like **data augmentation, transfer learning** and **model deployment** were also integrated, resulting in an **integral, fun** and **educational** project. The complete Jupyter Notebook of the project containing the Python code of the project is linked [here](jupyter/pan_dulce_complete.ipynb), and it should be used for **reproducibility** purposes (make sure all of the needed files are on the same folder before running).
 
-Finally, some proposed future work regarding the project is listed below.
+Finally, some proposed **future work** regarding the project is listed below.
 - Create a **bigger, richer dataset** containing more types of pan dulce
 - Combine different models to make for better **predictions**
 - Expand outside the pan dulce realm and into the complete set of **traditional Mexican food**
