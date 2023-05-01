@@ -25,7 +25,7 @@ Now, we can input images and make **predictions** on the type of pan dulce conta
   
 </div>
 
-The app **orrectly classifies** the image with a lot of certainty. It also gives the user a **brief description** of the pan dulce type. Now, we can use some **real images** taken from bought pieces of pan dulce to see how the model performs.
+The app **correctly classifies** the image with a lot of certainty. It also gives the user a **brief description** of the pan dulce type. Now, we can use some **real images** taken from bought pieces of pan dulce to see how the model performs.
 
 <div align = 'center'>
   
