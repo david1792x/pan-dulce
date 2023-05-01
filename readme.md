@@ -117,6 +117,6 @@ Taking into account the **objectives** of the project, the results are very **sa
 
 Finally, some proposed **future work** regarding the project is listed below.
 - Create a **bigger, richer dataset** containing more types of pan dulce
-- Combine different models to make for better **predictions**
+- **Combine** different models to make for better **predictions**
 - Expand outside the pan dulce realm and into the complete set of **traditional Mexican food**
-- Implement the model into an app that can get people interested about **Mexican culture** through food and strengthen sectors like **tourism or restaurants**
+- Implement the model into an app that can get people interested about **Mexican culture** through its **traditional foods** and strengthen sectors like the **restaurant industry** or **tourism**, among others.
