@@ -33,17 +33,28 @@ Pan dulce is sold in bakeries, or **panaderias**, where the pastries are display
 </div>
 
 ## **Project overview**
+In this project, we will use the `Bing Image Search API` to create a small dataset of 10 different types of pan dulce, and use this data to train a convolutional neural network that uses the `ResNet50` model as the base for an image classifier. Finally, the trained classifier will be used inside a simple web application designed using Streamlit and deployed through Streamlit Cloud Services to make classifications based on user inputted images, and display a small description of the predicted type of pan dulce.
 
+The workflow diagram of the project is shown below.
+
+
+<div align="center">
+
+|  <img src='images/dl_diagram.jpg' width="750">                       |
+|:----------------------------------------------------------------------:|
+| ***Figure 6.**  General workflow diagram of the project*                |
+
+</div>
 
 ## **Objectives**
 - Create a **labeled image dataset** of some of the most popular types of pan dulce
-- Train a **deep learning model** for image classification using **transfer learning**
+- Train a **deep learning model** for image classification using **transfer learning** and **data augmentation**
 - Deploy a simple **web application** for classification of user inputted images of pan dulce
 - Write **documentation** and **project reports** that correctly showcase the work made
 
 ## **Project development**
 ### Part I. Creating an image dataset
-The first step of the project is to build an **image dataset** of **10** different pan dulce types. The chosen types were **barquillo, beso, conchita, cuernito, donas, orejas, cochinito, pan de muerto, mantecada** and **Rosca de Reyes**. We used **Microsoft** `Bing Image Search API` to make different **queries** and retrieve the images for each class, **manually cleaned** the dataset and built a custom **model-friendly** version of our dataset for model training further on.
+The first step of the project is to build an **image dataset** of **10** different pan dulce types. The chosen types were **barquillo, beso, conchita, cuernito, donas, orejas, cochinito, pan de muerto, mantecada** and **Rosca de Reyes**. We used **Microsoft** `Bing Image Search API` to make different **queries** and retrieve the images for each class, **manually cleaned** the dataset and built a custom **model-friendly** version of our dataset, resulting in a small collection of around **1600** images.
 
 <br/>
 
@@ -92,13 +103,13 @@ Finally, we use the trained deep learning model as the backbone of a simple **we
 ---
 
 ## **Discussion**
-The **deep learning** model that was designed and developed in the project achieved an accuracy of around **90%**, which is very **good** considering the amount of data available and the objectives of the project. There are many food image classification projects that achieve higher metrics by using **larger** datasets like the `Food-101` dataset and bigger models like `VGG19` or `VisionTransformer`, but the `ResNet50` model chosen as the base of our model performs well enough for our application while maintaining an acceptable level of **complexity**.
+The **deep learning** model that was designed and developed in the project achieved an accuracy of around **90%**, which is very **good** considering the amount of data available and the objectives of the project. There are many food image classification projects that achieve higher metrics by using **larger datasets** like the `Food-101` dataset and **bigger models** like `VGG19` or `VisionTransformer`, but the `ResNet50` model chosen as the base of our model performs well enough for our application while maintaining an acceptable level of **complexity**.
 
 Some of the areas of opportunity for the project to improve are listed below.
-- The method for extracting data using Bing Image Search API is **not very efficient** since it returns a lot of **duplicate** images and not many unique samples.
-- The retrieved images are not very **noisy** and there are very few examples for the amount of categories. A **bigger** dataset containing more webscraped images and **hand-taken photos** would greatly improve model performance, since a machine learning model is only as **good** as the data it recieves.
+- The method for extracting data using Bing Image Search API is **not very efficient** since it returns a lot of **duplicate** images and not many unique samples. A better approach with **optimized queries** should be easy to design and implement.
+- The retrieved images are not very **noisy** and there are very few examples for the amount of categories in the project. A **bigger** dataset containing more webscraped images and **hand-taken photos** would greatly improve model performance, since a machine learning model is only as **good** as the data it recieves.
 - There are a lot more important **types** of pan dulce that weren't included in the model for simplicity purposes. A more efficient method for building a bigger dataset would allow for **more classes** to be added to the classification model.
-- The model does not account for images that are **not** pan dulce or for images of other kinds of pan dulce, so **incoherent predictions** are possible and should be taken into account when using the model for predictions. 
+- The model does **not** account for images that are not pan dulce or for images of **other kinds** of pan dulce, so **incoherent predictions** are possible and should be taken into account when using the model for predictions. 
 - Training was done using a **CPU** so **PyTorch's CUDA** integration could not be leveraged to improve training times. Faster times to train the model would have allowed for a more complete **comparison** between different **deep learning architectures** that wasn't done because of the long training times for every model.
 
 ## **Final remarks**
