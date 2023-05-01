@@ -1,6 +1,6 @@
 # **Creating an image classifier with deep learning**
 
-Now that we have a dataset of images of 10 different pan dulce types, we can move on to creating and training a deep learning model to classify our images. To start off, we import some of the modules that we will be using. For this project, we will use PyTorch as our deep learning framework. PyTorch was developed by a group of engineers at Facebook in 2016, and it is one of the most popular frameworks for deep learning alongside TensorFlow. To handle our image pre-processing tasks, we will use PyTorch's computer vision module, called torchvision.
+Now that we have a **dataset** of images of **10** different **pan dulce** types, we can move on to **creating** and **training** a **deep learning** model to classify our images. To start off, we import some of the modules that we will be using. For this project, we will use **PyTorch** as our deep learning framework. PyTorch was developed by a group of engineers at **Facebook** in 2016, and it is one of the most popular frameworks for deep learning alongside **TensorFlow**. To handle our image pre-processing tasks, we will use PyTorch's computer vision module, called **torchvision**.
 
 
 ```python
@@ -15,9 +15,9 @@ from PIL import Image
 import pandas as pd
 ```
 
-Now, we can move on to importing our image dataset. First, we need to define some of the pre-processing steps, or transformations, that our images will go through in order to be in a model friendly form. These steps involve resizing to our desired size (224 x 224 pixels), converting the image to a PyTorch tensor, and normalizing the pixel values (Spoiler alert: we use the mean and standard deviation of the ImageNet database since it is the dataset used to train the model used for our transfer learning process). 
+Now, we can move on to importing our image dataset. First, we need to define some of the **pre-processing** steps, or **transformations**, that our images will go through in order to be in a model friendly form. These steps involve **resizing** to our desired size (**224 x 224** pixels), converting the image to a PyTorch **tensor**, and **normalizing** the pixel values (Spoiler alert: we use the mean and standard deviation of the **ImageNet** database since it is the dataset used to train the model used for our **transfer learning** process). 
 
-Once we define the transforms, we import our dataset three times for each of our dataset splits (train, test and validation) using different transformations for each split, since we will use data augmentation on our training set. Right now, they contain the same images, but in the next step we will perform the split. We also specify our classes and view the size of the dataset and how each image looks shapewise.
+Once we define the transforms, we import our dataset **three** times for each of our dataset splits (**train, test** and **validation**) using different transformations for each split, since we will use **data augmentation** on our training set. Right now, they contain the same images, but in the next step we will perform the split. We also specify our classes and view the **size** of the dataset and how each image looks shapewise.
 
 
 ```python
@@ -70,7 +70,7 @@ print(f'Image shape: {train_dataset[0][0].shape}')
     Image shape: torch.Size([3, 224, 224])
     
 
-We have a total of 1634 images stored as tensors with shape (3, 224, 224), meaning that we have 3 channels (R, G and B) of 224 pixels each. To perform the splits, we can create a list of indices and use scikit-learn's `train_test_split` method to split our data. The reason we use this method is because it has stratified sampling integrated, meaning that if we pass a list of the labels, the algorithm will make sure that the number of classes in each split is balanced. First, we do an 80-20 split to extract our training and test set respectively, and then we split the training set into 80-20 again to extract the actual training set and the validation set. In total, we have a training set with 64% of our data, a validation set with 16% of our data and a test set with the remaining 20%. We can also see the number of images in each set.
+We have a total of **1634** images stored as tensors with shape **(3, 224, 224)**, meaning that we have **3** channels (R, G and B) of **224** pixels each. To perform the splits, we can create a list of indices and use scikit-learn's `train_test_split` method to split our data. The reason we use this method is because it has **stratified sampling** integrated, meaning that if we pass a list of the labels, the **algorithm** will make sure that the number of classes in each split is **balanced**. First, we do an **80-20** split to extract our **training** and **test** set respectively, and then we split the training set into **80-20** again to extract the actual **training** set and the **validation** set. In total, we have a training set with **64%** of our data, a validation set with **16%** of our data and a test set with the remaining **20%**. We can also see the number of images in each set.
 
 
 ```python
@@ -102,7 +102,7 @@ print(f'Test size: {len(test_loader.dataset)}')
     Test size: 327
     
 
-Just to make sure that the stratified sampling worked correctly, we can count the number of images of each class in each of our splits and confirm that they are roughly balanced in a 64-16-20 split. 
+Just to make sure that the **stratified sampling** worked correctly, we can count the number of images of each class in each of our splits and confirm that they are roughly balanced in a **64-16-20** split. 
 
 
 ```python
@@ -130,7 +130,7 @@ print(f'Test count: {test_count}')
     Test count: [14, 23, 64, 25, 23, 32, 54, 31, 25, 36]
     
 
-Now that we have defined our datasets, let's talk about the data augmentation process that is used in our training dataset. Data augmentation is a technique that can be used to artificially increment the size of our dataset by modifying our existing data to create new samples. It is an extremely useful tool for small datasets and a crucial part of computer vision models, since the underlying concept applies very naturally to images (a rotated or flipped image of a doughnut is still a doughnut). Since our training dataset contains only 1045 images (not a lot for a deep learning model), data augmentation will drastically improve the quality of our model. The modifications made to our training dataset are defined above in the image transforms, and in this case, we randomly flip, crop and rotate some of our images on each epoch of the training loop. Let's visualize some of these modified images.
+Now that we have defined our datasets, let's talk about the **data augmentation** process that is used in our training dataset. Data augmentation is a technique that can be used to **artificially** increment the size of our dataset by modifying our existing data to create new samples. It is an extremely useful tool for **small** datasets and a crucial part of **computer vision** models, since the underlying concept applies very naturally to images (a rotated or flipped image of a doughnut is still a doughnut). Since our training dataset contains only **1045** images (not a lot for a deep learning model), data augmentation will **drastically improve** the quality of our model. The modifications made to our training dataset are defined above in the image transforms, and in this case, we randomly **flip, crop** and **rotate** some of our images on each **epoch** of the training loop. Let's visualize some of these modified images.
 
 
 ```python
@@ -160,7 +160,7 @@ plt.show()
     
 
 
-Now, we can see some of the unmodified images located in both our test and validation sets. Since these images are used to assess model performance, they need to be in their default form and not undergo any modifications.
+Now, we can see some of the **unmodified** images located in both our test and validation sets. Since these images are used to assess model **performance**, they need to be in their **default** form and not undergo any modifications.
 
 
 ```python
@@ -187,8 +187,9 @@ plt.show()
     
 
 
-The next step is to define our deep learning model architecture. In this project, we will use a technique called transfer learning to leverage a large model for our classification task.
-Transfer learning consists on loading an often large, pretrained deep learning model and re-purpose it for our particular task by adding specific components to it. It is a really popular technique to use in computer vision since a lot of these really big models are trained on huge image datasets, and their weights are already optimized for image processing tasks. The base model that will be used for our image classification task is ResNet50, developed by Kaiming He, et. al. in 2015. It contains 25,557,032 parameters and it is a very popular architecture for transfer learning in computer vision projects. We import the model with the default weights and freeze its parameters so that our training loop will not change them at all (this would make computation time extremely high and it is not needed).
+The next step is to define our **deep learning** model architecture. In this project, we will use a technique called **transfer learning** to leverage a large model for our classification task.
+
+**Transfer learning** consists on loading an often large, **pretrained** deep learning model and **re-purpose** it for our particular task by adding specific components to it. It is a really popular technique to use in **computer vision** since a lot of these really big models are trained on **huge image datasets**, and their weights are already **optimized** for image processing tasks. The base model that will be used for our image classification task is `ResNet50`, developed by **Kaiming He, et. al.** in **2015**. It contains **25,557,032** parameters and it is a very popular architecture for transfer learning in computer vision projects. We import the model with the **default weights** and **freeze** its parameters so that our training loop will not change them at all (this would make **computation time** extremely high and it is not needed).
 
 
 ```python
@@ -198,7 +199,7 @@ for param in model.parameters():
     param.requires_grad = False
 ```
 
-Now, we can substitute the last layer of the ResNet50 model, which is a classifier with 1000 labels, to our own simple neural network that will be trained specifically for pan dulce type classification with only 10 labels. Our custom neural network consists of a dense layer with a ReLU activation function, a dropout layer to prevent overfitting, and a last dense layer with 11 outputs that goes into a LogSoftmax layer for probability outputs. Our complete model has 24,562,250 parameters, where only 1,054,218 will be optimized during training. 
+Now, we can substitute the **last layer** of the `ResNet50` model, which is a classifier with 1000 labels, to our own simple **neural network** that will be trained specifically for **pan dulce type classification** with only **10** labels. Our custom neural network consists of a **dense** layer with a **ReLU** activation function, a **dropout** layer to prevent **overfitting**, and a last **dense** layer with 10 outputs that goes into a **LogSoftmax** layer for **probability outputs**. Our complete model has **24,562,250** parameters, where only **1,054,218** will be optimized during training. 
 
 
 ```python
@@ -408,7 +409,7 @@ summary(model, (3, 224, 224))
     ----------------------------------------------------------------
     
 
-Now, we define the loss function to optimize and our model optimizer. We will use cross entropy as our loss function since it the most popular loss function for multi-label classification tasks. We will also use the Adam optimizer, which is an improved version of stochastic gradient descent for optimization of deep neural networks.
+Now, we define the **loss** function to optimize and our model **optimizer**. We will use **cross entropy** as our loss function since it the most popular loss function for **multi-label classification** tasks. We will also use the **Adam** optimizer, which is an improved version of **stochastic gradient descent** for optimization of **deep neural networks**.
 
 
 ```python
@@ -419,7 +420,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 ```
 
-Now, we define our training loop function. This training loop will loop through our training set, make predictions and obtain a loss in order to implement backpropagation to update the model weights. Then, we assess model performance on the validation dataset and save our weights if they give us the highest validation accuracy. This process is repeated for the number of epochs defined and every epoch is logged in the console with its corresponding metrics.
+Now, we define our **training loop** function. This training loop will loop through our training set, make **predictions** and obtain a **loss** in order to implement **backpropagation** to update the model weights. Then, we assess **model performance** on the **validation** dataset and save our weights if they give us the highest **validation accuracy**. This process is repeated for the number of **epochs** defined and every epoch is **logged** in the console with its corresponding metrics.
 
 
 ```python
@@ -487,7 +488,7 @@ def fit(model, train_loader, val_loader, criterion, optimizer, epochs=10, device
     return model, history
 ```
 
-Now, we train our model for 15 epochs and visualize the results. PyTorch has the option of using NVIDIA's CUDA toolkit to use a GPU for training, but in this case the model was trained on a CPU, so it took a long time to finish.
+Now, we train our model for **15** epochs and visualize the results. **PyTorch** has the option of using **NVIDIA's CUDA** toolkit to use a **GPU** for training, but in this case the model was trained on a **CPU**, so it took a long time to finish.
 
 
 ```python
@@ -528,9 +529,10 @@ trained_model, history = fit(model, train_loader, val_loader, criterion, optimiz
     train loss: 0.1256, train acc: 0.9617, val loss: 0.4540, val acc: 0.8779, time: 333.52s
     Epoch: 15/15
     train loss: 0.1044, train acc: 0.9703, val loss: 0.5192, val acc: 0.8817, time: 322.20s
-    
+    Finished training in 5788.58s.
+    Best val acc: 0.8969
 
-From the logs, we can see that our model fluctuates at a little bit less of 90% accuracy, which is really good for a simple deep learning model trained on a low number of images. We can also see that epoch 13 had the best metrics, so further on we will load the weights of the best epoch and use those as our final weights. We can now plot the loss and accuracy of our model on each epoch and see the trend.
+From the logs, we can see that our model fluctuates at a little bit less of **90%** accuracy, which is really good for a simple **deep learning** model trained on a low number of images. We can also see that epoch **13** had the best metrics, so further on we will **load** the weights of the best epoch and use those as our final weights. We can now plot the loss and accuracy of our model on each epoch and see the trend.
 
 
 ```python
@@ -561,7 +563,7 @@ plt.show()
     
 
 
-The model got a lot better in the first few epochs and then it stabilized after about 10 epochs. We can also see that in the first few epochs, the model performed much better on the validation set than on the training set, and in later epochs, the training metrics were much better than the validation metrics. Now, we can load the best model weights and move on to doing a final performance assessment on the testing set.
+The model got a lot **better** in the first few epochs and then it stabilized after about **10** epochs. We can also see that in the first few epochs, the model performed much better on the **validation** set than on the **training** set, and in later epochs, the training metrics were much **better** than the validation metrics. Now, we can load the **best model weights** and move on to doing a final performance assessment on the testing set.
 
 
 ```python
@@ -576,7 +578,7 @@ trained_model.load_state_dict(torch.load('best_checkpoint.model'))
 
 
 
-We will define a function that passes data through our model to make predictions and return both the predictions and the real labels.
+We will define a function that passes data through our model to make **predictions** and return both the **predictions** and the **real labels**.
 
 
 ```python
@@ -599,7 +601,7 @@ def predict(model, test_loader, device='cpu'):
     return predictions, real_values
 ```
 
-Now, we test the model performance on the test set. For this, we calculate the accuracy, precision, recall, and F1 scores.
+Now, we test the model **performance** on the test set. For this, we calculate the **accuracy, precision, recall**, and **F1** scores.
 
 
 ```python
@@ -641,7 +643,7 @@ print('Classification report: \n', classification_report(real_values, prediction
     
     
 
-We can see that our model achieves an accuracy of 88.99%, and an F1 score of 88.92% which is very good considering our project objectives. We can also visualize the confusion matrix of our test set predictions to see the actual results.
+We can see that our model achieves an accuracy of **88.99%**, and an F1 score of **88.92%** which is very good considering our **project objectives**. We can also visualize the **confusion matrix** of our test set predictions to see the actual results.
 
 
 ```python
@@ -667,9 +669,9 @@ plt.show()
     
 
 
-As we can see, the diagonal has a high number of samples, meaning that the accuracy of our model is pretty high. There are only a few number of misclassified examples, but if we analyze the results, we can see that it makes sense for the model to misclassify some of them. For example, some of the most common errors were images of besos classified as pan de muerto and images of cuernitos classified as orejas. If we look at these types of pan dulce, we can see that even though our human brain can correctly tell which one is which, they look pretty similar and our model made some errors in classifying some of these examples.
+As we can see, the **diagonal** has a high number of samples, meaning that the **accuracy** of our model is pretty **high**. There are only a few number of **misclassified** examples, but if we analyze the results, we can see that it makes sense for the model to misclassify some of them. For example, some of the most common errors were images of **besos** classified as **pan de muerto** and images of **cuernitos** classified as **orejas**. If we look at these types of pan dulce, we can see that even though our **human brain** can correctly tell which one is which, they look pretty **similar** and our model made some errors in classifying some of these examples.
 
-As a final evaluation, we will perform a sanity check by visually observing the model prediction on real, unlabeled images. These images were extracted by hand from the Facebook page of a local panaderia in Ensenada, Baja California (Panaderia Ornelas). An image from each class was taken and we will run these images through our model to see if their predictions match the actual type of pan dulce in the image. First, we import our images into a tensor format.
+As a **final evaluation**, we will perform a **sanity check** by visually observing the model prediction on **real, unlabeled** images. These images were extracted by hand from the **Facebook** page of a local panaderia in **Ensenada, Baja California** (Panaderia **Ornelas**). An image from each class was taken and we will run these images through our model to see if their predictions **match** the actual type of pan dulce in the image. First, we import our images into a tensor format.
 
 
 ```python
@@ -684,7 +686,7 @@ for file in os.listdir('dataset/test/'):
     real_dataset = torch.cat((real_dataset, img.unsqueeze(0)), 0)
 ```
 
-Now, we pass the images through our training model and obtain the predicted probabilities and the predicted class for each of our 10 images.
+Now, we pass the images through our training model and obtain the predicted **probabilities** and the predicted class for each of our 10 images.
 
 
 ```python
@@ -694,7 +696,7 @@ output_labels = torch.max(outputs.data, 1)
 output_classes = [classes[i] for i in output_labels[1].tolist()]
 ```
 
-Now, we plot the images with the predicted class and the probability of the image belonging to the predicted class. Probabilities close to 100% mean that the model is very sure that the image belongs to the class, while lower probabilities mean that the model had a harder time choosing a class for the image.
+Now, we plot the images with the **predicted class** and the probability of the image **belonging** to the predicted class. Probabilities close to **100%** mean that the model is **very sure** that the image belongs to the class, while **lower** probabilities mean that the model had a **harder** time choosing a class for the image.
 
 
 ```python
@@ -717,7 +719,7 @@ for i in range(10):
     
 
 
-We can see that all of our images were correctly classified by our model, with a pretty high probability in most of them. The model had a lower probability in the barquillo, cuernitos and pan de muerto categories, but the certainty is still pretty high. Now, we save our complete trained model in order to be used by a simple web application to make predictions on user inputted images.
+We can see that **all** of our images were correctly classified by our model, with a pretty **high probability** in most of them. The model had a **lower probability** in the **barquillo**, **cuernitos** and **pan de muerto** categories, but the certainty is still pretty high. Now, we **save** our complete trained model in order to be used by a simple **web application** to make predictions on user inputted images.
 
 
 ```python
@@ -725,4 +727,4 @@ We can see that all of our images were correctly classified by our model, with a
 torch.save(trained_model, 'pan_dulce_model.pt')
 ```
 
-With our model saved, we can now open it on our web app and use it to make predictions on new images. In the final step of the project, we will design and develop this web application using the `Streamlit` platform.
+With our model saved, we can now open it on our **web app** and use it to make **predictions** on new images. In the final step of the project, we will **design** and **develop** this web application using the `Streamlit` platform.
