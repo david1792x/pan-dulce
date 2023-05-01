@@ -1,6 +1,6 @@
 # **Creating an image classifier with deep learning**
 
-Now that we have a dataset of images of 10 different pan dulce types, we can move on to creating and training a deep learning model to classify our images. To start off, we import some of the modules that we will be using. For this project, we will use PyTorch as our deep learning framework. PyTorch was developed by a group of engineers at Meta (formerly Facebook) in 2016, and it is one of the most popular frameworks for deep learning alongside TensorFlow. To handle our image pre-processing tasks, we will use PyTorch's computer vision module, called torchvision.
+Now that we have a dataset of images of 10 different pan dulce types, we can move on to creating and training a deep learning model to classify our images. To start off, we import some of the modules that we will be using. For this project, we will use PyTorch as our deep learning framework. PyTorch was developed by a group of engineers at Facebook in 2016, and it is one of the most popular frameworks for deep learning alongside TensorFlow. To handle our image pre-processing tasks, we will use PyTorch's computer vision module, called torchvision.
 
 
 ```python
@@ -156,7 +156,7 @@ plt.show()
 
 
     
-![png](output_9_0.png)
+![png](/images/output_9_0.png)
     
 
 
@@ -183,7 +183,7 @@ plt.show()
 
 
     
-![png](output_11_0.png)
+![png](/images/output_11_0.png)
     
 
 
@@ -557,7 +557,7 @@ plt.show()
 
 
     
-![png](output_23_0.png)
+![png](/images/output_23_0.png)
     
 
 
@@ -663,7 +663,7 @@ plt.show()
 
 
     
-![png](output_31_0.png)
+![png](/images/output_31_0.png)
     
 
 
@@ -713,7 +713,7 @@ for i in range(10):
 
 
     
-![png](output_37_0.png)
+![png](/images/output_37_0.png)
     
 
 
