@@ -2,7 +2,7 @@
 
 In any data science project, the most important part is to obtain the data. To do this, we will use the Bing search engine to look for images of pan dulce. Bing is a search engine owned by Microsoft and launched in 2009. It has become a popular option as of lately for its implementation of AI models and ease of use. Here is an example of the search results of pan dulce in Bing.
 
-![Bing search](images/bing.JPG)
+![Bing search](/images/bing.JPG)
 
 We will use Microsoft's Bing Image Search API to scrape image results from the Bing search engine, and download them to create our image dataset. The first step is to import the Python modules needed to make the API calls.
 
@@ -84,11 +84,11 @@ for pan, names in pan_dulce_types.items():
 
 After this, we need to manually check all of our images to remove noise from our dataset. This is a tedious process since pan dulce types tend to have common words in Spanish as names, like conchita meaning shell, beso meaning kiss, and so on. Let's visualize one of the image folders to see its contents.
 
-![Dataset folder](images/puerquito_1.JPG)
+![Dataset folder](/images/puerquito_1.JPG)
 
 At least for the first images downloaded, the results is just what we needed, a bunch of pan dulce images. Now, lets scroll down to the final results and see what we have there.
 
-![Dataset folder](images/puerquito_2.JPG)
+![Dataset folder](/images/puerquito_2.JPG)
 
 We can see that there is quite a bunch of images that do not correspond with our needs, so we remove them manually. Once we have our clean dataset, we reset the name of the images in our dataset and build the .csv file that will be used to store the image path and the class that it corresponds to for our model to process the images.
 
@@ -116,19 +116,6 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
