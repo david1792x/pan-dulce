@@ -1,6 +1,6 @@
 # **Extracting dataset using Bing Image Search API**
 
-In any data science project, the most important part is to obtain the data. To do this, we will use the Bing search engine to look for images of pan dulce. Bing is a search engine owned by Microsoft and launched in 2009. It has become a popular option as of lately for its implementation of AI models and ease of use. Here is an example of the search results of pan dulce in Bing.
+In any **data science** project, the most important part is to obtain the **data**. To do this, we will use the **Bing** search engine to look for images of pan dulce. Bing is a search engine owned by **Microsoft** and launched in 2009. It has become a popular option as of lately for its implementation of **AI models** and ease of use. Here is an example of the search results of pan dulce in Bing.
 
 <div align = 'center'>
   
@@ -10,7 +10,7 @@ In any data science project, the most important part is to obtain the data. To d
   
 </div>
 
-We will use Microsoft's Bing Image Search API to scrape image results from the Bing search engine, and download them to create our image dataset. The first step is to import the Python modules needed to make the API calls.
+We will use Microsoft's `Bing Image Search API` to scrape image results from the Bing search engine, and download them to create our **image dataset**. The first step is to import the Python modules needed to make the **API calls**.
 
 
 ```python
@@ -21,7 +21,7 @@ import requests
 import urllib.request
 ```
 
-Taking the project objectives into account, it was decided to restrict the project to a model that can recognize 10 of the most popular types of pan dulce, and these were chosen based on personal experience and image availability, even though there are a lot more popular types of pan dulce that weren't included. We need to take into account different names for the same type of pan dulce, so we can define a dictionary of some possible names for each type so that we can maximize the data obtained.
+Taking the project objectives into account, it was decided to restrict the project to a model that can recognize **10** of the most popular types of **pan dulce**, and these were chosen based on **personal experience** and **image availability**, even though there are a lot more popular types of pan dulce that weren't included. We need to take into account different **names** for the same type of pan dulce, so we can define a **dictionary** of some possible names for each type so that we can maximize the data obtained.
 
 
 ```python
@@ -41,7 +41,7 @@ pan_dulce_types = {'conchita': ['conchita', 'concha'],
                     'besos': ['besos', 'besitos', 'ojo de buey', 'yoyos']}
 ```
 
-Microsoft offers the Bing Image Search API as a tool to help users in retrieving data from the web. We set up a resource inside Microsoft Azure cloud platform to handle our API calls, and chose the basic option that allows for up to 1000 calls a month and 3 calls per second. There are higher pricing tiers available for users that need to handle more data, but for our project this will do more than enough. To use the API, we need to get a subscription key from our resource, define the URL and our headers. The subscription key is user inputted for privacy reasons.
+Microsoft offers the `Bing Image Search API` as a tool to help users in retrieving data from the web. We set up a resource inside **Microsoft Azure** cloud platform to handle our API calls, and chose the basic option that allows for up to **1000** calls a month and **3** calls per second. There are higher pricing tiers available for users that need to handle more data, but for our project this will do more than enough. To use the API, we need to get a **subscription key** from our resource, define the **URL** and our **headers**. The subscription key is user inputted for **privacy** reasons.
 
 
 ```python
@@ -51,7 +51,7 @@ search_url = "https://api.bing.microsoft.com/v7.0/images/search"
 headers = {"Ocp-Apim-Subscription-Key" : subscription_key}
 ```
 
-Now that all of our parameters have been defined, we can move on to doing the actual API calls and downloading our images. First we define a dataset folder that will host subfolders of all of our pan dulce types, and then loop over the alternative namings, performing a query and downloading the images to the specified folder. The number of results will vary with the number of alternate namings to keep the amount of data even between pan dulce types. Finally, we check for duplicate images and remove them, completing the webscraping part of building our image dataset.
+Now that all of our **parameters** have been defined, we can move on to doing the actual **API calls** and **downloading** our images. First we define a **dataset** folder that will host subfolders of all of our pan dulce types, and then loop over the alternative namings, performing a **query** and downloading the images to the specified folder. The number of results will vary with the number of alternate namings to keep the amount of data **even** between pan dulce types. Finally, we check for **duplicate** images and remove them, completing the webscraping part of building our **image dataset**.
 
 
 ```python
@@ -88,7 +88,7 @@ for pan, names in pan_dulce_types.items():
             os.remove(path)
 ```
 
-After this, we need to manually check all of our images to remove noise from our dataset. This is a tedious process since pan dulce types tend to have common words in Spanish as names, like conchita meaning shell, beso meaning kiss, and so on. Let's visualize one of the image folders to see its contents.
+After this, we need to **manually check** all of our images to remove noise from our dataset. This is a **tedious** process since pan dulce types tend to have common words in Spanish as names, like **conchita** meaning **shell**, **beso** meaning **kiss**, and so on. Let's visualize one of the image folders to see its contents.
 
 <div align = 'center'>
   
@@ -98,7 +98,7 @@ After this, we need to manually check all of our images to remove noise from our
   
 </div>
 
-At least for the first images downloaded, the results is just what we needed, a bunch of pan dulce images. Now, lets scroll down to the final results and see what we have there.
+At least for the first images downloaded, the results are **just what we needed**, a bunch of pan dulce images. Now, lets scroll down to the final results and see what we have there.
 
 <div align = 'center'>
   
@@ -108,7 +108,7 @@ At least for the first images downloaded, the results is just what we needed, a 
   
 </div>
 
-We can see that there is quite a bunch of images that do not correspond with our needs, so we remove them manually. Once we have our clean dataset, we reset the name of the images in our dataset and build the .csv file that will be used to store the image path and the class that it corresponds to for our model to process the images.
+We can see that there is quite a bunch of images that **do not** correspond with our needs, so we **remove** them manually. Once we have our **clean dataset**, we reset the name of the images in our dataset and build the **.csv** file that will be used to store the image path and the class that it corresponds to for our **model** to process the images.
 
 
 ```python
@@ -169,6 +169,4 @@ df.head()
 </table>
 </div>
 
-
-
-With this done, the only thing left to do is to create the code necessary to import our dataset in a model friendly form. We will use PyTorch to create and train our our deep learning model, so we can define a custom dataset class with a PyTorch friendly format. The dataset class is defined in `pan_dulce_dataset.py`, located [here](dataset/pan_dulce_dataset.py). In the next stage of the project, we will use this dataset to train a convolutional neural network model for classification of pan dulce images.
+With this done, the only thing left to do is to create the **code** necessary to import our **dataset** in a model friendly form. We will use **PyTorch** to **create** and **train** our our **deep learning** model, so we can define a **custom dataset** class with a PyTorch friendly format. The dataset class is defined in `pan_dulce_dataset.py`, located [here](/dataset/pan_dulce_dataset.py). In the next stage of the project, we will use this dataset to train a **convolutional neural network** model for classification of pan dulce images.
